@@ -1,0 +1,21 @@
+create table users (
+	id serial primary key,
+	name varchar(256),
+	email varchar(128),
+	password varchar(128)
+);
+
+create table students (
+	id integer,
+	name varchar(256),
+	department varchar(256),
+	semester_no integer,
+	current_cgpa numeric(3, 2),
+	mobile_no varchar(14),
+	email varchar(128),
+	dob varchar(128),
+	gender varchar(6),
+	address varchar(256),
+	father_name varchar(256),
+	mother_name varchar(256)
+);
