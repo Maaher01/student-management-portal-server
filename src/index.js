@@ -61,7 +61,6 @@ app.delete("/delete/:id", (request, response) => {
 });
 
 app.post("/students", (request, response) => {
-	console.log("request", request.body);
 	const {
 		name,
 		id,
@@ -103,7 +102,6 @@ app.post("/students", (request, response) => {
 });
 
 app.post("/users", (request, response) => {
-	console.log("request", request.body);
 	const { name, email, password } = request.body;
 
 	pool.query(
@@ -133,7 +131,6 @@ app.put("/update/:id", (request, response) => {
 		fatherName,
 		motherName,
 	} = request.body;
-	console.log("request", request.body);
 	pool.query(
 		"UPDATE students SET name = $1, department = $2, semester_no = $3, current_cgpa = $4, mobile_no = $5, email = $6, dob = $7, gender = $8, address = $9, father_name = $10, mother_name = $11 WHERE id = $12",
 		[
